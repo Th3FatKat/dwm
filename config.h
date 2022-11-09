@@ -8,7 +8,6 @@ static const int startwithgaps	    = 1;	/* 1 means gaps are used by default */
 static const unsigned int gappx     = 10;       /* default gap in pixels */
 /* normal colors */
 static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=16" };
-static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#222222";	//BG Color
 static const char col_gray2[]       = "#444444";	//Standby Border Color
 static const char col_gray3[]       = "#bbbbbb";	//Font Color
@@ -82,7 +81,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_purple, "-nf", col_turquoise, "-sb", col_turquoise, "-sf", col_purple, NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *lfcmd[]  = { "alacritty", "-e", "/usr/bin/lfub", NULL };
 static const char *webcmd[]  = { "librewolf", NULL };
