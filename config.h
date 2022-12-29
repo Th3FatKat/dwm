@@ -3,9 +3,6 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-/* custom options */
-static const int startwithgaps	    = 1;	/* 1 means gaps are used by default */
-static const unsigned int gappx     = 10;       /* default gap in pixels */
 /* normal colors */
 static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=16" };
 static const char col_gray1[]       = "#222222";	//BG Color
@@ -14,7 +11,7 @@ static const char col_gray3[]       = "#bbbbbb";	//Font Color
 static const char col_gray4[]       = "#eeeeee";	//Selected Tag & Window Color
 static const char col_cyan[]        = "#005577";	//Top Bar and Window Color
 /* custom colors */
-static const char col_turquoise[]   = "#00FFB4";
+static const char col_turquoise[]   = "#00FFCF";
 static const char col_purple[]      = "#6E35B1";
 static const char col_neonpink[]    = "#FF00C9";
 static const char *colors[][3]      = {
@@ -38,7 +35,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "5", "6", "7", "8", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -46,9 +43,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",				NULL,				NULL,				0,						1,					 -1 },
-	{ "Steam",			NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "Steam",			NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Claws-mail",	NULL,       NULL,       1 << 3,       0,           -1 },
+	{ NULL,					"kdenlive", NULL,       1 << 4,       0,           -1 },
+	{ NULL,					"tenacity", NULL,       1 << 4,       0,           -1 },
 	{ NULL,					"keepassxc",NULL,				SPTAG(0),			1,					 -1 },
-	{ "Claws-mail",	NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* window swallowing */
@@ -85,6 +84,8 @@ static const char *dmenucmd[] = { "dmenu_run", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *lfcmd[]  = { "alacritty", "-e", "/usr/bin/lfub", NULL };
 static const char *webcmd[]  = { "librewolf", NULL };
+static const char *editsound[]  = { "tenacity", NULL };
+static const char *editvideo[]  = { "kdenlive", NULL };
 
 
 static const Key keys[] = {
@@ -93,6 +94,8 @@ static const Key keys[] = {
 	{ MODKEY,												XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,												XK_f,			 spawn,          {.v = lfcmd } },
 	{ MODKEY,												XK_w,			 spawn,          {.v = webcmd } },
+	{ MODKEY,												XK_s,			 spawn,          {.v = editsound } },
+	{ MODKEY,												XK_v,			 spawn,          {.v = editvideo } },
 	{ MODKEY,												XK_c,      killclient,     {0} },
 	{ MODKEY|ShiftMask,							XK_k,			 togglescratch,  {.ui = 0 } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
@@ -116,10 +119,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_u,      swalstopsel,    {0} },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
-	{ MODKEY,                       XK_plus,	 setgaps,        {.i = +5 } },
-	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
-	{ MODKEY|ShiftMask,             XK_plus,	 setgaps,        {.i = GAP_TOGGLE} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
