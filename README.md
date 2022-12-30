@@ -5,6 +5,7 @@ Patches, bindings, and a little bit of 'tism
 - [Hide Vacant Tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [Dynamic Swallow](https://dwm.suckless.org/patches/dynamicswallow/)
 - [Scratchpads](https://dwm.suckless.org/patches/scratchpads/)
+- [Stacker](https://dwm.suckless.org/patches/stacker/)
 
 #### Unique Bindings
 > Window Swallowing
@@ -14,8 +15,20 @@ Refer to this [Tutorial](https://www.youtube.com/watch?v=iB4aBY0H_oI) for a good
 map your programs to `dwmswallow $WINDOWID; *Program Name*` in your .bashrc
 
 > Scratchpads
-- _ModKey + Shift + K_ = **KeePassXC**
+- _ModKey + Shift + O_ = **KeePassXC**
 
->Other
+> Other
 - _ModKey + F_ = **LF File Manager**
 - _ModKey + W_ = **Browser**
+
+> Stacker
+
+Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + ShiftMask_ for **push**.
+| Key | Description |
+| ----------- | ----------- |
+| *K* | Up Stack |
+| *J* | Down Stack |
+| *Q* | First Position |
+| *A* | Second Position |
+| *Z* | Third Position |
+| *X* | Last Position |
