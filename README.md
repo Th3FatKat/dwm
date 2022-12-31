@@ -17,10 +17,6 @@ map your programs to `dwmswallow $WINDOWID; *Program Name*` in your .bashrc
 > Scratchpads
 - _ModKey + Shift + O_ = **KeePassXC**
 
-> Other
-- _ModKey + F_ = **LF File Manager**
-- _ModKey + W_ = **Browser**
-
 > Stacker
 
 Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + ShiftMask_ for **push**.
@@ -32,3 +28,8 @@ Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + ShiftMask_ f
 | *A* | Second Position |
 | *Z* | Third Position |
 | *X* | Last Position |
+
+> Others
+- _ModKey + F_ = **File Manager**
+- _ModKey + W_ = **Browser**
+- _ModKey + Escape_ = **Quit DWM**
