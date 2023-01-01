@@ -1,12 +1,12 @@
 # DWM build
-Patches, bindings, and a little bit of 'tism
+Patches, bindings, and a little o' the 'tism
 
 #### Patches:
 - [Hide Vacant Tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [Dynamic Swallow](https://dwm.suckless.org/patches/dynamicswallow/)
 - [Scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [Stacker](https://dwm.suckless.org/patches/stacker/)
--[Vanity Gaps](https://dwm.suckless.org/patches/vanitygaps/)
+- [Vanity Gaps](https://dwm.suckless.org/patches/vanitygaps/)
 
 #### Unique Bindings
 > Window Swallowing
