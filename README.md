@@ -6,12 +6,15 @@ Patches, bindings, and a little bit of 'tism
 - [Dynamic Swallow](https://dwm.suckless.org/patches/dynamicswallow/)
 - [Scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [Stacker](https://dwm.suckless.org/patches/stacker/)
+-[Vanity Gaps](https://dwm.suckless.org/patches/vanitygaps/)
 
 #### Unique Bindings
 > Window Swallowing
-Refer to this [Tutorial](https://www.youtube.com/watch?v=iB4aBY0H_oI) for a good guide by a euroman
+- _ModKey + U_ = **Split swallower and swallowe**
 
-**tl:dr**
+For the rest, refer to this [Tutorial](https://www.youtube.com/watch?v=iB4aBY0H_oI) for a good guide by a euroman
+
+**tl;dw**
 map your programs to `dwmswallow $WINDOWID; *Program Name*` in your .bashrc
 
 > Scratchpads
@@ -19,7 +22,7 @@ map your programs to `dwmswallow $WINDOWID; *Program Name*` in your .bashrc
 
 > Stacker
 
-Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + ShiftMask_ for **push**.
+Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + Shift_ for **push**.
 | Key | Description |
 | ----------- | ----------- |
 | *K* | Up Stack |
@@ -28,6 +31,12 @@ Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + ShiftMask_ f
 | *A* | Second Position |
 | *Z* | Third Position |
 | *X* | Last Position |
+
+> Vanity Gaps
+- _ModKey + Minus_ = **Toggle Gaps**
+- _ModKey + Shift + Minus_ = **Reset Gaps**
+- _ModKey + Plus_ = **Reduce Gaps**
+- _ModKey + Shift + Plus_= **Increase Gaps**
 
 > Others
 - _ModKey + F_ = **File Manager**
