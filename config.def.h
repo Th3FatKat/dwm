@@ -9,7 +9,7 @@ static       int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 /* normal colors */
-static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=16" };
+static const char *fonts[]          = { "terminus:size=15", "fontawesome:size=16" };
 static const char col_gray1[]       = "#222222";	//BG Color
 static const char col_gray2[]       = "#444444";	//Standby Border Color
 static const char col_gray3[]       = "#bbbbbb";	//Font Color
