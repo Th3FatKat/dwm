@@ -73,7 +73,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "#=",      tile },    /* first entry is default */
 	{ "(O)",      monocle },
-	{ "[@]",      spiral },
+	/*{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
@@ -83,7 +83,7 @@ static const Layout layouts[] = {
 	{ "---",      horizgrid },
 	{ ":::",      gaplessgrid },
 	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
+	{ ">M>",      centeredfloatingmaster },*/
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
@@ -130,6 +130,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,							XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,							XK_m,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ShiftMask,							XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,												XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
