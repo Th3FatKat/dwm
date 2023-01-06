@@ -1,5 +1,5 @@
 # DWM build
-Patches, bindings, and a little o' the 'tism
+### Patches, bindings, autism.
 
 #### Patches:
 - [Hide Vacant Tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
@@ -18,7 +18,7 @@ For the rest, refer to this [Tutorial](https://www.youtube.com/watch?v=iB4aBY0H_
 map your programs to `dwmswallow $WINDOWID; *Program Name*` in your .bashrc
 
 > Scratchpads
-- _ModKey + Shift + O_ = **KeePassXC**
+- _ModKey + Shift + P_ = **KeePassXC**
 
 > Stacker
 

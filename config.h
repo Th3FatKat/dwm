@@ -145,7 +145,7 @@ static const Key keys[] = {
 	/*Swallower*/
 	{ MODKEY,                       XK_u,      swalstopsel,    {0} },
 	/*ScratchPads*/
-	{ MODKEY|ShiftMask,							XK_o,			 togglescratch,  {.ui = 0 } },
+	{ MODKEY|ShiftMask,							XK_p,			 togglescratch,  {.ui = 0 } },
 	/*Stacker*/
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
