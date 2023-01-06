@@ -49,10 +49,11 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",				NULL,				NULL,				0,						1,					 -1 },
 	{ "Steam",			NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Lutris",			NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Claws-mail",	NULL,       NULL,       1 << 3,       0,           -1 },
-	{ NULL,					"kdenlive", NULL,       1 << 4,       0,           -1 },
-	{ NULL,					"tenacity", NULL,       1 << 4,       0,           -1 },
-	{ NULL,					"keepassxc",NULL,				SPTAG(0),			1,					 -1 },
+	{ "kdenlive",		NULL,				NULL,       1 << 4,       0,           -1 },
+	{ "Tenacity",		NULL,				NULL,       1 << 4,       0,           -1 },
+	{ "KeePassXC",	NULL,				NULL,				SPTAG(0),			1,					 -1 },
 };
 
 /* window swallowing */
@@ -110,8 +111,8 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *lfcmd[]  = { "alacritty", "-e", "/usr/bin/lfub", NULL };
 static const char *webcmd[]  = { "librewolf", NULL };
+static const char *lfcmd[]  = { "alacritty", "-e", "/usr/bin/lfub", NULL };
 
 
 static const Key keys[] = {
