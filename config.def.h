@@ -109,10 +109,15 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
+/*
+static const char *<-->[] = { "<-->", NULL};
+*/
 static const char *dmenucmd[] = { "dmenu_run", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *webcmd[]  = { "librewolf", NULL };
 static const char *lfcmd[]  = { "alacritty", "-e", "/usr/bin/lfub", NULL };
+static const char *reboot[] = { "loginctl", "reboot", NULL};
+static const char *shutdown[] = { "loginctl", "poweroff", NULL};
 
 
 static const Key keys[] = {
@@ -121,6 +126,8 @@ static const Key keys[] = {
 	{ MODKEY,												XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,												XK_f,			 spawn,          {.v = lfcmd } },
 	{ MODKEY,												XK_w,			 spawn,          {.v = webcmd } },
+	{ Mod1Mask|ControlMask,					XK_Delete, spawn,					 {.v = reboot }	},
+	{ Mod1Mask|ControlMask,					XK_End,		 spawn,					 {.v = shutdown }	},
 	{ MODKEY,												XK_c,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
