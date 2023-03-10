@@ -7,6 +7,7 @@
 - [Scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [Stacker](https://dwm.suckless.org/patches/stacker/)
 - [Vanity Gaps](https://dwm.suckless.org/patches/vanitygaps/)
+- [Centered Master (& floating variant layouts)](https://dwm.suckless.org/patches/centeredmaster/)
 
 #### Unique Bindings
 > Window Swallowing
@@ -36,9 +37,17 @@ Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + Shift_ for *
 - _ModKey + Minus_ = **Toggle Gaps**
 - _ModKey + Shift + Minus_ = **Reset Gaps**
 - _ModKey + Plus_ = **Reduce Gaps**
-- _ModKey + Shift + Plus_= **Increase Gaps**
+- _ModKey + Shift + Plus_ = **Increase Gaps**
 
-> Others
+> Layouts
+
+- _ModKey + Shift + T_ = **Tiling**
+- _ModKey + Shift + M_ = **Monocle**
+- _ModKey + Shift + F_ = **Floating**
+- _ModKey + Shift + U_ = **Centered Master**
+- _ModKey + Shift + O_ = **Centered Floating Master**
+
+> Misc.
 - _ModKey + W_ = **Browser**
 - _ModKey + F_ = **File Manager**
 - _ModKey + Escape_ = **Quit DWM**
