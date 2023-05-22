@@ -50,6 +50,6 @@ Two parallel sets of bindings; _MODKEY_ for **focus** and _MODKEY + Shift_ for *
 > Misc.
 - _ModKey + W_ = **Browser**
 - _ModKey + F_ = **File Manager**
-- _ModKey + Escape_ = **Quit DWM**
+- _ModKey + Shift + Escape_ = **Quit DWM**
 - _Ctrl + LeftAlt + Delete_ = **REBOOT**
 - _Ctrl + LeftAlt + End_ = **SHUTDOWN**
