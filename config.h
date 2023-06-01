@@ -20,7 +20,7 @@ static const char col_cyan[]        = "#005577";	//Top Bar and Window Color
 /* custom colors */
 static const char col_turquoise[]   = "#00FFCF";
 static const char col_purple[]      = "#6E35B1";
-static const char col_neonpink[]    = "#FF00C9";
+static const char col_neonpink[]    = "#FF1088";
 static const char *colors[][3]      = {
 /*											fg		         bg         border   */
 	[SchemeNorm] = { col_turquoise, col_purple, col_turquoise },
