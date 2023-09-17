@@ -119,6 +119,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0";	/* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *neovimcmd[]  = { "neovim", NULL };
 static const char *webcmd[]		= { "librewolf", NULL };
 static const char *lfcmd[]		= { "alacritty", "-e", "/usr/bin/lfub", NULL };
 static const char *reboot[]		= { "loginctl", "reboot", NULL};
@@ -126,12 +127,6 @@ static const char *shutdown[] = { "loginctl", "poweroff", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key						function				 argument */
-	{ MODKEY,                       XK_p,     		spawn,         	 {.v = dmenucmd } },
-	{ MODKEY,												XK_Return,		spawn,         	 {.v = termcmd } },
-	{ MODKEY,												XK_f,					spawn,         	 {.v = lfcmd } },
-	{ MODKEY,												XK_w,					spawn,         	 {.v = webcmd } },
-	{ Mod1Mask|ControlMask,					XK_Delete,		spawn,				 	 {.v = reboot } },
-	{ Mod1Mask|ControlMask,					XK_End,				spawn,				 	 {.v = shutdown } },
 	{ MODKEY,												XK_c,     		killclient,    	 {0} },
 	{ MODKEY|ShiftMask,             XK_b,     		togglebar,     	 {0} },
 	{ MODKEY,                       XK_i,     		incnmaster,    	 {.i = +1 } },
@@ -152,6 +147,14 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period,		focusmon,      	 {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma, 		tagmon,        	 {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,		tagmon,        	 {.i = +1 } },
+	/*Custom*/
+	{ MODKEY,												XK_n,					spawn,         	 {.v = neovimcmd } },
+	{ MODKEY,                       XK_p,     		spawn,         	 {.v = dmenucmd } },
+	{ MODKEY,												XK_Return,		spawn,         	 {.v = termcmd } },
+	{ MODKEY,												XK_f,					spawn,         	 {.v = lfcmd } },
+	{ MODKEY,												XK_w,					spawn,         	 {.v = webcmd } },
+	{ Mod1Mask|ControlMask,					XK_Delete,		spawn,				 	 {.v = reboot } },
+	{ Mod1Mask|ControlMask,					XK_End,				spawn,				 	 {.v = shutdown } },
 	/*Gaps*/
 	{ MODKEY,          							XK_minus, 		togglegaps,    	 {0} },
 	{ MODKEY|ShiftMask,							XK_minus, 		defaultgaps,   	 {0} },
@@ -192,7 +195,7 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,						Button3,        toggletag,      {0} },
 	/*Swallower*/
 	{ ClkClientWin,         MODKEY|ShiftMask, Button1,      swalmouse,      {0} },
-	/*Status*/
+	/*StatusBar*/
 	{ ClkStatusText,        0,     						Button1,        sigstatusbar,   {.i = 1} },
 	{ ClkStatusText,        0,     						Button2,        sigstatusbar,   {.i = 2} },
 	{ ClkStatusText,        0,     						Button3,        sigstatusbar,   {.i = 3} },
